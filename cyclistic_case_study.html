@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Cyclistic Ride Patterns Analysis | Google Data Analytics Capstone</title>
+
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .portfolio-description {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .portfolio-description h2 {
+            font-weight: 700;
+            margin-top: 30px;
+            color: #000000;
+        }
+
+        .portfolio-description ul,
+        .portfolio-description ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-description p {
+            margin-bottom: 20px;
+        }
+
+        .separator {
+            border: 0;
+            height: 1px;
+            background: #000000;
+            /* Dark separator line */
+            margin: 30px 0;
+        }
+
+        .btn-visit {
+            display: block;
+            background: #4154f1;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px 0;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-visit:hover {
+            background: #2a34c5;
+        }
+
+        .portfolio-info h3 {
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-info ul {
+            padding-left: 0;
+            list-style: none;
+            color: #000000;
+            /* Ensure list items are black */
+        }
+
+        .portfolio-info li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <h1>Portfolio<span>.</span></h1>
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="index.html#portfolio">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        </div>
+    </header>
+    <main id="main">
+
+        <div class="breadcrumbs">
+            <div class="page-header d-flex align-items-center" style="background-image: url('');">
+                <div class="container text-center position-relative">
+                    <h2>Cyclistic Ride Patterns Analysis</h2>
+                    <p>Google Data Analytics Capstone Project using R</p>
+                </div>
+            </div>
+        </div>
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row justify-content-between gy-4 mt-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-description">
+
+                            <h2>Introduction</h2>
+                            <p>
+                                This <strong>capstone project</strong> focuses on analyzing <strong>Cyclistic bike-share
+                                    data</strong> from the first
+                                quarter of 2019 and 2020. The goal is to understand how <strong>annual members</strong>
+                                and <strong>casual riders</strong>
+                                use Cyclistic bikes differently, helping the company design strategies to convert casual
+                                riders into annual members.
+                            </p>
+
+                            <hr class="separator">
+
+                            <h2>Objective</h2>
+                            <ul>
+                                <li><strong>Clean and merge</strong> raw Divvy trip datasets for 2019 Q1 and 2020 Q1.
+                                </li>
+                                <li><strong>Analyze and visualize</strong> ride duration, user type, day, and seasonal
+                                    patterns using R.</li>
+                                <li>Generate insights that can support Cyclistic’s <strong>marketing
+                                        strategies</strong>.</li>
+                            </ul>
+
+                            <hr class="separator">
+
+                            <h2>Data Cleaning and Preparation</h2>
+                            <ol>
+                                <li>Loaded <strong>Divvy_Trips_2019_Q1</strong> and <strong>Divvy_Trips_2020_Q1</strong>
+                                    datasets using <code>read_csv()</code>.</li>
+                                <li>Renamed and standardized column names with <code>clean_names()</code>.</li>
+                                <li>Converted date columns to <code>datetime</code> objects using
+                                    <code>ymd_hms()</code>.</li>
+                                <li>Removed null values, duplicates, and invalid ride durations (&lt;1 min or &gt;24
+                                    hours).</li>
+                                <li>Created new columns: <code>ride_length_min</code>, <code>day_of_week</code>,
+                                    <code>month</code>, <code>year</code>, and <code>season</code>.</li>
+                                <li>Re-coded user type from <code>usertype</code> (subscriber/customer) to
+                                    <code>member_casual</code> (member/casual).</li>
+                                <li>Merged the 2019 and 2020 datasets into one unified DataFrame for analysis.</li>
+                            </ol>
+
+                            <hr class="separator">
+                            
+                            <h2>Analysis & Findings</h2>
+                            <ul>
+                                <li><strong>Members</strong> consistently accounted for more rides than casual users.</li>
+                                <li><strong>Casual riders</strong> showed a sharp increase on weekends, while members were more active on weekdays.
+                                </li>
+                                <li><strong>Average ride length</strong> for casual riders was significantly longer than for members.</li>
+                                <li>Ride activity peaked in <strong>summer afternoons</strong> for both groups.</li>
+                                <li>Top 10 starting stations were similar for both groups, with <strong>downtown areas</strong> being the most
+                                    popular.</li>
+                            </ul>
+                            
+                            <hr class="separator">
+
+                        <h2>Recommendations</h2>
+                        <ul>
+                            <li><strong>Seasonal Campaigns</strong>: Launch targeted membership drives ahead of spring/summer peaks.</li>
+                            <li><strong>Geo-Targeting</strong>: Focus on high-casual stations near leisure/tourist areas.</li>
+                            <li><strong>Value Proposition</strong>: Highlight cost savings of membership for long rides.</li>
+                            <li><strong>Flexible Plans</strong>: Introduce weekend/seasonal membership tiers to attract casual riders.</li>
+                        </ul>
+
+                            <hr class="separator">
+
+                            <h2>Conclusion</h2>
+                            <p>
+                                The analysis highlights key <strong>behavioral differences</strong> between member and
+                                casual riders.
+                                Casual users prefer <strong>long weekend rides</strong>, while members use the service
+                                more frequently for <strong>daily commuting</strong>.
+                                Cyclistic should target casual riders with <strong>weekend-based promotions</strong> or
+                                discounted memberships to encourage conversion.
+                            </p>
+
+                        </div>
+                    </div>
+
+<div class="col-lg-3">
+    <div class="portfolio-info">
+        <h3>Summary</h3>
+        <ul>
+            <li><strong>Tools Used</strong> R, tidyverse, dplyr, ggplot2</li>
+            <li><strong>Data</strong> Divvy Trips 2019, 2020 Q1</li>
+            <li><strong>Skills</strong> Data Cleaning, EDA, Visualization, Insights</li>
+        </ul>
+
+        <hr>
+        <p>To see full detailed project:</p>
+        <a href="https://github.com/hamzajawad123/cyclistic_bike_share_analysis" class="btn-visit" target="_blank">
+            Go to GitHub
+        </a>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container mt-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>YourName</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
