@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>E-commerce Sales Analysis | Personal Project</title>
+
+    <link href="assets/img/favicon.png" rel="icon" />
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@500;700&display=swap"
+        rel="stylesheet" />
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="assets/css/main.css" rel="stylesheet" />
+
+    <style>
+        .portfolio-description {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .portfolio-description h2 {
+            font-weight: 700;
+            margin-top: 30px;
+            color: #000000;
+        }
+
+        .separator {
+            border: 0;
+            height: 1px;
+            background: #000000;
+            margin: 30px 0;
+        }
+
+        .btn-visit {
+            display: block;
+            background: #4154f1;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px 0;
+            font-weight: 600;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-visit:hover {
+            background: #2a34c5;
+        }
+
+        code {
+            display: block;
+            background: #f8f8f8;
+            border-left: 4px solid #4154f1;
+            padding: 10px;
+            margin: 10px 0;
+            white-space: pre-wrap;
+            font-size: 14px;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="index.html" class="logo d-flex align-items-center">
+                <h1>Portfolio<span>.</span></h1>
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="index.html#hero">Home</a></li>
+                    <li><a href="aboutme.html">About Me</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="index.html#portfolio">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="breadcrumbs">
+            <div class="page-header d-flex align-items-center">
+                <div class="container text-center position-relative">
+                    <h2>E-commerce Sales Analysis</h2>
+                    <p>Comprehensive Sales Insights and Market Performance Review (SQL-Based Project)</p>
+                </div>
+            </div>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container" data-aos="fade-up">
+                <div class="row justify-content-between gy-4 mt-4">
+                    <div class="col-lg-8">
+                        <div class="portfolio-description">
+
+                            <h2>Introduction</h2>
+                            <p>
+                                This project analyzes <strong>e-commerce sales performance</strong> using SQL queries
+                                applied to a structured relational database. The dataset includes tables for orders,
+                                customers, regions, and products. The aim is to explore sales behavior, profit trends,
+                                and customer segmentation to guide business strategy and enhance profitability.
+                            </p>
+
+                            <hr class="separator" />
+
+                            <h2>Objective</h2>
+                            <p>
+                                The objective of this project is to use SQL for <strong>data-driven decision
+                                    making</strong> by identifying key performance metrics such as total sales, profit,
+                                customer demographics, and regional distribution. SQL queries with
+                                <code>
+SELECT region, SUM(sales), SUM(profit)
+FROM orders
+GROUP BY region;
+                                </code>
+                                clauses were used to derive insights from the sales data efficiently.
+                            </p>
+
+                            <hr class="separator" />
+
+                            <h2>Sales Overview</h2>
+                            <p>
+                                The dataset contained over <strong>10,000 transaction records</strong> across multiple
+                                regions. Aggregate functions like
+                                <code>
+SELECT SUM(sales), SUM(profit)
+FROM orders;
+                                </code>
+                                were used to calculate total sales and total profit. The <code>COUNT()</code> function
+                                identified total orders and customers.
+                            </p>
+
+                            <hr class="separator" />
+
+                            <h2>Regional Sales Performance</h2>
+                            <p>
+                                SQL’s <code>GROUP BY</code> was used to summarize sales and profit by region:
+                                <code>
+SELECT region, SUM(sales), SUM(profit)
+FROM orders
+GROUP BY region;
+                                </code>
+                                The results revealed that the <strong>West Region</strong> contributed the highest
+                                share of total revenue (38%), followed by East, Central, and South regions.
+                            </p>
+
+                            <hr class="separator" />
+
+                            <h2>Category-wise Profitability</h2>
+                            <p>
+                                Product categories were analyzed using:
+                                <code>
+SELECT category, SUM(sales), SUM(profit)
+FROM products
+GROUP BY category;
+                                </code>
+                                This helped identify which categories contributed most to revenue. The
+                                <strong>Technology</strong> category performed best, while
+                                <strong>Furniture</strong> faced reduced margins due to discounting.
+                            </p>
+
+                            <hr class="separator" />
+
+                            <h2>Discount vs Profit Relationship</h2>
+                            <p>
+                                The relationship between discount and profit was studied using SQL correlation logic:
+                                <code>
+SELECT discount, AVG(profit)
+FROM orders
+GROUP BY discount;
+                                </code>
+                                It was observed that higher discounts resulted in lower profit margins.
+                            </p>
+
+                            <hr class="separator" />
+
+                            <h2>Customer Segment Analysis</h2>
+                            <p>
+                                Customer segmentation was evaluated using:
+                                <code>
+SELECT segment, SUM(sales) AS total_sales
+FROM customers
+JOIN orders
+    ON customers.customer_id = orders.customer_id
+GROUP BY segment;
+                                </code>
+                                The <strong>Consumer</strong> segment accounted for 52% of total revenue.
+                            </p>
+
+                            <hr class="separator" />
+
+                            <h2>Top 5 Products by Sales</h2>
+                            <p>
+                                The top products were identified using:
+                                <code>
+SELECT product_name, SUM(sales) AS total_sales
+FROM products
+JOIN orders
+    ON products.product_id = orders.product_id
+GROUP BY product_name
+ORDER BY total_sales DESC
+LIMIT 5;
+                                </code>
+                                These products represented 15% of the total revenue.
+                            </p>
+
+                            <hr class="separator" />
+
+                            <h2>Conclusion</h2>
+                            <p>
+                                The e-commerce sales analysis demonstrated how SQL can efficiently uncover key business
+                                insights from structured datasets. The results highlighted that the West region leads in
+                                sales, while the Technology category remains the most profitable. Discounting negatively
+                                affects profit margins, suggesting that excessive price reductions may harm
+                                profitability.
+                                Consumer segments dominate the customer base, providing an opportunity for targeted
+                                marketing strategies. Overall, SQL-based data exploration proved valuable for optimizing
+                                sales strategies and improving business decisions.
+                            </p>
+
+                            <hr class="separator" />
+
+                            <h2>Recommendations</h2>
+                            <p>
+                                1. <strong>Optimize Discount Strategy:</strong> Avoid deep discounts on low-margin
+                                products to sustain profitability.<br>
+                                2. <strong>Boost Technology Category:</strong> Invest more in technology-related
+                                marketing and stock levels to maximize revenue.<br>
+                                3. <strong>Target Consumer Segment:</strong> Develop personalized offers and loyalty
+                                programs for the Consumer segment, which generates over half the revenue.<br>
+                                4. <strong>Regional Expansion:</strong> Improve logistics and promotional efforts in
+                                underperforming regions like the South to balance overall growth.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="portfolio-info">
+                            <h3>Summary</h3>
+                            <ul>
+                                <li><strong>Tools Used:</strong> SQL (MySQL), Joins, Aggregations, Subqueries</li>
+                                <li><strong>Data:</strong> Online E-commerce Sales Database</li>
+                                <li><strong>Skills:</strong> Query Optimization, Data Cleaning, KPI Reporting</li>
+                            </ul>
+
+                            <hr />
+                            <p>View full project details:</p>
+                            <a href="https://github.com/hamzajawad123/e-commerce_sales_analysis" class="btn-visit"
+                                target="_blank">Go to GitHub</a>
+                            <br>
+                            <p>See the visualization dashboard:</p>
+                            <a href="https://public.tableau.com/app/profile/hamza.jawad2518/viz/ecommerce_sales_dashboard_17620793296760/Dashboard1?publish=yes" class="btn-visit" target="_blank">Go to Tableau
+                                Public</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container mt-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

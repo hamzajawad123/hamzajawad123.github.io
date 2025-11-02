@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Cyclistic Ride Patterns Analysis | Google Data Analytics Capstone</title>
+    <title>Bellabeat Case Study | Google Data Analytics Capstone</title>
 
     <link href="assets/img/favicon.png" rel="icon">
     <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -47,7 +47,6 @@
             border: 0;
             height: 1px;
             background: #000000;
-            /* Dark separator line */
             margin: 30px 0;
         }
 
@@ -76,7 +75,6 @@
             padding-left: 0;
             list-style: none;
             color: #000000;
-            /* Ensure list items are black */
         }
 
         .portfolio-info li {
@@ -109,16 +107,18 @@
             <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
         </div>
     </header>
+
     <main id="main">
 
         <div class="breadcrumbs">
             <div class="page-header d-flex align-items-center" style="background-image: url('');">
                 <div class="container text-center position-relative">
-                    <h2>Cyclistic Ride Patterns Analysis</h2>
+                    <h2>Bellabeat Case Study</h2>
                     <p>Google Data Analytics Capstone Project using R</p>
                 </div>
             </div>
         </div>
+
         <section id="portfolio-details" class="portfolio-details">
             <div class="container" data-aos="fade-up">
 
@@ -129,23 +129,19 @@
 
                             <h2>Introduction</h2>
                             <p>
-                                This <strong>capstone project</strong> focuses on analyzing <strong>Cyclistic bike-share
-                                    data</strong> from the first
-                                quarter of 2019 and 2020. The goal is to understand how <strong>annual members</strong>
-                                and <strong>casual riders</strong>
-                                use Cyclistic bikes differently, helping the company design strategies to convert casual
-                                riders into annual members.
+                                This <strong>Bellabeat case study</strong> analyzes smart device usage data to help
+                                Bellabeat, a wellness technology company, understand customer behavior.
+                                The goal is to derive actionable insights for marketing and product development.
                             </p>
 
                             <hr class="separator">
 
                             <h2>Objective</h2>
                             <ul>
-                                <li><strong>Clean and merge</strong> raw Divvy trip datasets for 2019 Q1 and 2020 Q1.
-                                </li>
-                                <li><strong>Analyze and visualize</strong> ride duration, user type, day, and seasonal
-                                    patterns using R.</li>
-                                <li>Generate insights that can support Cyclistic’s <strong>marketing
+                                <li>Explore <strong>Fitbit Fitness Tracker</strong> data to understand user activity,
+                                    sleep, and wellness patterns.</li>
+                                <li>Perform <strong>data cleaning, analysis, and visualization</strong> using R.</li>
+                                <li>Generate insights to guide <strong>Bellabeat’s product and marketing
                                         strategies</strong>.</li>
                             </ul>
 
@@ -153,81 +149,83 @@
 
                             <h2>Data Cleaning and Preparation</h2>
                             <ol>
-                                <li>Loaded <strong>Divvy_Trips_2019_Q1</strong> and <strong>Divvy_Trips_2020_Q1</strong>
-                                    datasets using <code>read_csv()</code>.</li>
-                                <li>Renamed and standardized column names with <code>clean_names()</code>.</li>
-                                <li>Converted date columns to <code>datetime</code> objects using
-                                    <code>ymd_hms()</code>.</li>
-                                <li>Removed null values, duplicates, and invalid ride durations (&lt;1 min or &gt;24
-                                    hours).</li>
-                                <li>Created new columns: <code>ride_length_min</code>, <code>day_of_week</code>,
-                                    <code>month</code>, <code>year</code>, and <code>season</code>.</li>
-                                <li>Re-coded user type from <code>usertype</code> (subscriber/customer) to
-                                    <code>member_casual</code> (member/casual).</li>
-                                <li>Merged the 2019 and 2020 datasets into one unified DataFrame for analysis.</li>
+                                <li>Imported datasets using <code>read_csv()</code>.</li>
+                                <li>Standardized column names using <code>clean_names()</code> from the janitor package.
+                                </li>
+                                <li>Converted date/time columns using <code>ymd()</code> or <code>mdy_hms()</code>.</li>
+                                <li>Removed duplicates, missing values, and unrealistic entries (e.g., zero sleep
+                                    minutes).</li>
+                                <li>Created derived columns like <code>total_daily_steps</code> and
+                                    <code>average_sleep_hours</code>.
+                                </li>
+                                <li>Aggregated data to summarize daily and weekly activity for trend identification.
+                                </li>
                             </ol>
 
                             <hr class="separator">
-                            
-                            <h2>Analysis & Findings</h2>
+
+                            <h2>Analysis & Key Findings</h2>
                             <ul>
-                                <li><strong>Members</strong> consistently accounted for more rides than casual users.</li>
-                                <li><strong>Casual riders</strong> showed a sharp increase on weekends, while members were more active on weekdays.
-                                </li>
-                                <li><strong>Average ride length</strong> for casual riders was significantly longer than for members.</li>
-                                <li>Ride activity peaked in <strong>summer afternoons</strong> for both groups.</li>
-                                <li>Top 10 starting stations were similar for both groups, with <strong>downtown areas</strong> being the most
-                                    popular.</li>
+                                <li>Average daily steps were <strong>below 10,000</strong>, showing potential for
+                                    increased activity.</li>
+                                <li><strong>Sleep duration</strong> was higher on weekends than weekdays.</li>
+                                <li><strong>Sedentary minutes</strong> negatively correlated with active minutes.</li>
+                                <li>Heart rate and weight showed <strong>gradual consistency</strong> with activity
+                                    levels.</li>
                             </ul>
-                            
+
                             <hr class="separator">
-                            
+                          
+
                             <h2>Conclusion</h2>
                             <p>
-                                The analysis highlights key <strong>behavioral differences</strong> between member and
-                                casual riders.
-                                Casual users prefer <strong>long weekend rides</strong>, while members use the service
-                                more frequently for <strong>daily commuting</strong>.
-                                Cyclistic should target casual riders with <strong>weekend-based promotions</strong> or
-                                discounted memberships to encourage conversion.
+                                The analysis uncovered actionable insights that can help Bellabeat improve user
+                                engagement
+                                and product personalization.
+                                Personalized wellness programs and targeted marketing could increase overall user
+                                satisfaction
+                                and encourage healthier habits.
                             </p>
-                        
-                        <hr class="separator">
 
-                        <h2>Recommendations</h2>
-                        <ul>
-                            <li><strong>Seasonal Campaigns</strong>: Launch targeted membership drives ahead of spring/summer peaks.</li>
-                            <li><strong>Geo-Targeting</strong>: Focus on high-casual stations near leisure/tourist areas.</li>
-                            <li><strong>Value Proposition</strong>: Highlight cost savings of membership for long rides.</li>
-                            <li><strong>Flexible Plans</strong>: Introduce weekend/seasonal membership tiers to attract casual riders.</li>
-                        </ul>
+                            <hr class="separator">
+
+                            <h2>Recommendations</h2>
+                            <ul>
+                                <li><strong>Targeted challenges</strong> to promote weekday activity increases.</li>
+                                <li><strong>Personalized notifications</strong> to remind users to move after long
+                                    sedentary periods.</li>
+                                <li><strong>Marketing emphasis</strong> on improved sleep tracking and wellness
+                                    awareness.</li>
+                                <li>Product features focusing on <strong>weekend activity monitoring</strong>.</li>
+                            </ul>
 
 
                         </div>
                     </div>
 
-<div class="col-lg-3">
-    <div class="portfolio-info">
-        <h3>Summary</h3>
-        <ul>
-            <li><strong>Tools Used</strong> R, tidyverse, dplyr, ggplot2</li>
-            <li><strong>Data</strong> Divvy Trips 2019, 2020 Q1</li>
-            <li><strong>Skills</strong> Data Cleaning, EDA, Visualization, Insights</li>
-        </ul>
+                    <div class="col-lg-3">
+                        <div class="portfolio-info">
+                            <h3>Summary</h3>
+                            <ul>
+                                <li><strong>Tools Used</strong> R, tidyverse, dplyr, ggplot2</li>
+                                <li><strong>Data</strong> Fitbit Fitness Tracker Dataset</li>
+                                <li><strong>Skills</strong> Data Cleaning, EDA, Visualization, Insight Generation</li>
+                            </ul>
 
-        <hr>
-        <p>To see full detailed project:</p>
-        <a href="https://github.com/hamzajawad123/cyclistic_bike_share_analysis" class="btn-visit" target="_blank">
-            Go to GitHub
-        </a>
-        <br>
-        <p>To see the attractive dashboard:</p>
-        <a href="https://public.tableau.com/app/profile/hamza.jawad2518/viz/cyclistic_dashboard_17581892826230/Dashboard1"
-            class="btn-visit" target="_blank">
-            Go to Tableau Public
-        </a>
-    </div>
-</div>
+                            <hr>
+                            <p>To see full detailed project:</p>
+                            <a href="https://github.com/hamzajawad123/bellabeat_wellness_analysis" class="btn-visit"
+                                target="_blank">
+                                Go to GitHub
+                            </a>
+                            <br>
+                            <p>To see the attractive dashboard:</p>
+                            <a href="https://public.tableau.com/app/profile/hamza.jawad2518/viz/bellabeat_dashboard_17608907680500/Dashboard1"
+                                class="btn-visit" target="_blank">
+                                Go to Tableau Public
+                            </a>
+                        </div>
+                    </div>
 
                 </div>
             </div>
@@ -245,8 +243,8 @@
         </div>
     </footer>
 
-    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i></a>
     <div id="preloader"></div>
 
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
