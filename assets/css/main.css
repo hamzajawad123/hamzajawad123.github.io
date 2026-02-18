@@ -2825,3 +2825,17 @@ section {
 .service-item:hover img {
   transform: scale(1.2);
 }
+
+/* ===== Navbar Text Color Black ===== */
+
+.navbar ul li a,
+.navbar ul li a:focus {
+  color: #000 !important;
+  font-weight: 600;
+}
+
+/* Hover Effect */
+.navbar ul li a:hover,
+.navbar ul li a.active {
+  color: #000 !important;
+}
