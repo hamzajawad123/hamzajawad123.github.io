@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Optimizing Customer Support | Repeat Call Volume Analysis</title>
+
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .portfolio-description {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .portfolio-description h2 {
+            font-weight: 700;
+            margin-top: 30px;
+            color: #000000;
+        }
+
+        .portfolio-description ul,
+        .portfolio-description ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-description p {
+            margin-bottom: 20px;
+        }
+
+        .separator {
+            border: 0;
+            height: 1px;
+            background: #000000;
+            margin: 30px 0;
+        }
+
+        .btn-visit {
+            display: block;
+            background: #4154f1;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px 0;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-visit:hover {
+            background: #2a34c5;
+        }
+
+        .portfolio-info h3 {
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-info ul {
+            padding-left: 0;
+            list-style: none;
+            color: #000000;
+        }
+
+        .portfolio-info li {
+            margin-bottom: 10px;
+        }
+
+        strong {
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+
+<header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center">
+            <h1>Portfolio<span>.</span></h1>
+        </a>
+        <nav id="navbar" class="navbar">
+            <ul>
+                <li><a href="index.html#hero">Home</a></li>
+                <li><a href="aboutme.html">About Me</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="index.html#portfolio">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+        <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+    </div>
+</header>
+
+<main id="main">
+
+<div class="breadcrumbs">
+    <div class="page-header d-flex align-items-center" style="background-image: url('');">
+        <div class="container text-center position-relative">
+            <h2>Optimizing Customer Support</h2>
+            <p>Reducing Repeat Call Volume using SQL & Tableau</p>
+        </div>
+    </div>
+</div>
+
+<section id="portfolio-details" class="portfolio-details">
+<div class="container" data-aos="fade-up">
+
+<div class="row justify-content-between gy-4 mt-4">
+
+<div class="col-lg-8">
+<div class="portfolio-description">
+
+<h2>Introduction</h2>
+<p>
+This project analyzes customer support interaction logs to identify the root causes of repeat call volume in Internet and WiFi technical support services.
+The goal is to reduce operational costs and improve customer satisfaction by addressing issues that are not resolved during the first interaction.
+</p>
+
+<hr class="separator">
+
+<h2>Objective</h2>
+<ul>
+<li>Identify support topics causing customers to call back within 7 days.</li>
+<li>Map raw <strong>Problem Type</strong> codes into business-related categories.</li>
+<li>Analyze repeat call trends across different operational markets.</li>
+<li>Highlight technical issues impacting customer trust and service efficiency.</li>
+</ul>
+
+<hr class="separator">
+
+<h2>Data Cleaning and Preparation</h2>
+<ol>
+<li>Cleaned and queried interaction logs using SQL.</li>
+<li>Mapped raw issue codes into categories such as Internet Support and Account Management.</li>
+<li>Filtered call records to isolate repeat calls within a 7-day window.</li>
+<li>Segmented data by support category and operational market.</li>
+<li>Prepared structured datasets for Tableau visualization.</li>
+</ol>
+
+<hr class="separator">
+
+<h2>Analysis & Key Findings</h2>
+<ul>
+<li>The majority of repeat calls occur within <strong>24–48 hours</strong> after the first interaction.</li>
+<li><strong>Internet & WiFi</strong> issues account for approximately <strong>50% of repeat calls</strong>.</li>
+<li>Technical problems generate <strong>2x more repeat calls</strong> than Technician Troubleshooting.</li>
+<li>Market_1 experiences significant call spikes on Mondays.</li>
+<li>Market_2 maintains stable and consistently low call volume.</li>
+</ul>
+
+<hr class="separator">
+
+<h2>Conclusion</h2>
+<p>
+The primary drivers of repeat calls are Internet and WiFi technical failures within Market_1.
+Unresolved hardware and connectivity issues are creating early-week service backlogs, particularly on Mondays, resulting in recurring customer interactions.
+</p>
+
+<hr class="separator">
+
+<h2>Recommendations</h2>
+<ul>
+<li><strong>Audit Internet Equipment:</strong> Evaluate routers and connectivity devices for recurring technical faults.</li>
+<li><strong>Swarm Team Deployment:</strong> Assign additional technical support staff to Market_1 on Mondays.</li>
+<li><strong>Training Focus:</strong> Prioritize Advanced WiFi Troubleshooting over Account Management.</li>
+<li><strong>First Call Resolution Strategy:</strong> Address technical root causes during initial interactions.</li>
+</ul>
+
+</div>
+</div>
+
+<div class="col-lg-3">
+<div class="portfolio-info">
+<h3>Summary</h3>
+<ul>
+<li><strong>Tools Used</strong> SQL, Tableau</li>
+<li><strong>Domain</strong> Customer Support Analytics</li>
+<li><strong>Skills</strong> Data Cleaning, Trend Analysis, Insight Generation</li>
+</ul>
+
+<hr>
+<p>To see full detailed project:</p>
+<a href="enter link here" class="btn-visit" target="_blank">
+Go to GitHub
+</a>
+<br>
+<p>To see the attractive dashboard:</p>
+<a href="enter link here" class="btn-visit" target="_blank">
+Go to Tableau Public
+</a>
+</div>
+</div>
+
+</div>
+</div>
+</section>
+</main>
+
+<footer id="footer" class="footer">
+<div class="container mt-4">
+<div class="copyright">
+&copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+</div>
+<div class="credits">
+Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+</div>
+</div>
+</footer>
+
+<a href="#" class="scroll-top d-flex align-items-center justify-content-center">
+<i class="bi bi-arrow-up-short"></i></a>
+<div id="preloader"></div>
+
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<script>
+AOS.init();
+</script>
+
+</body>
+</html>
