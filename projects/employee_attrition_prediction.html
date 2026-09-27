@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Employee Attrition Prediction | Hamza Jawad Portfolio</title>
+    <meta content="Explainable machine learning pipeline predicting employee flight risk and turnover drivers by Hamza Jawad (DecodeLabs Internship)." name="description">
+
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .portfolio-description {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .portfolio-description h2 {
+            font-weight: 700;
+            margin-top: 30px;
+            color: #000000;
+        }
+
+        .portfolio-description ul,
+        .portfolio-description ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-description p {
+            margin-bottom: 20px;
+        }
+
+        .separator {
+            border: 0;
+            height: 1px;
+            background: #e0e0e0;
+            margin: 30px 0;
+        }
+
+        .btn-visit {
+            display: block;
+            background: var(--color-primary);
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px 0;
+            font-weight: 600;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-visit:hover {
+            background: #2a054c;
+            color: #fff;
+        }
+
+        .portfolio-info h3 {
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-info ul {
+            padding-left: 0;
+            list-style: none;
+            color: #000000;
+        }
+
+        .portfolio-info li {
+            margin-bottom: 10px;
+        }
+
+        .metric-badge {
+            display: inline-block;
+            background: rgba(90, 24, 154, 0.1);
+            color: var(--color-primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 13px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="../index.html" class="logo d-flex align-items-center">
+                <h1>Portfolio<span>.</span></h1>
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="../index.html#hero">Home</a></li>
+                    <li><a href="../aboutme.html">About Me</a></li>
+                    <li><a href="../experience.html">Experience</a></li>
+                    <li><a href="../index.html#portfolio">Projects</a></li>
+                    <li><a href="../resume.html">Resume</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <div class="breadcrumbs">
+            <div class="page-header d-flex align-items-center">
+                <div class="container text-center position-relative">
+                    <h2>Employee Attrition Prediction & Workforce Retention</h2>
+                    <p>Explainable Machine Learning Model to Forecast Flight Risks & Uncover Key Retention Drivers</p>
+                </div>
+            </div>
+            <nav>
+                <div class="container">
+                    <ol>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#portfolio">Projects</a></li>
+                        <li>Employee Attrition Prediction</li>
+                    </ol>
+                </div>
+            </nav>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row justify-content-between gy-4 mt-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-description">
+
+                            <h2>Project Overview</h2>
+                            <p>
+                                Created during my <strong>Machine Learning Internship at DecodeLabs</strong>, this project delivers an actionable HR intelligence system predicting employee turnover risks before resignations occur. Unplanned employee attrition imposes heavy costs on organizations—ranging from 50% to 200% of an employee's annual salary in recruiting, onboarding, and productivity loss.
+                            </p>
+                            <p>
+                                Going beyond black-box classification, this project places heavy emphasis on <strong>model explainability (XAI)</strong> and <strong>feature importance analysis</strong>, giving people operations teams clear diagnostic reasoning behind why specific individuals or departments exhibit elevated departure risks.
+                            </p>
+
+                            <div class="mb-4">
+                                <span class="metric-badge"><i class="bi bi-graph-up-arrow"></i> 86% Overall Accuracy</span>
+                                <span class="metric-badge"><i class="bi bi-shield-check"></i> 0.87 ROC-AUC</span>
+                                <span class="metric-badge"><i class="bi bi-people"></i> Flight-Risk Profiling</span>
+                                <span class="metric-badge"><i class="bi bi-lightbulb"></i> Explainable AI (XAI)</span>
+                            </div>
+
+                            <hr class="separator">
+
+                            <h2>Organizational Problem & Analytical Goals</h2>
+                            <ul>
+                                <li><strong>Proactive vs. Reactive HR</strong>: Traditional retention efforts happen during exit interviews when it is already too late. A predictive system provides an early-warning horizon (3–6 months ahead).</li>
+                                <li><strong>Interpretable Drivers</strong>: Business stakeholders reject models that cannot explain their recommendations. Pinpointing whether flight risk is driven by excessive overtime, compensation disparities, or stagnant promotion cycles is critical.</li>
+                                <li><strong>Multivariate Demographic & Workplace Data</strong>: Incorporates salary, commute distance, work-life balance, job role, marital status, and stock option levels.</li>
+                            </ul>
+
+                            <hr class="separator">
+
+                            <h2>Methodology: Google PACE Framework</h2>
+                            <ol>
+                                <li><strong>Plan</strong>: Framed the business objective to minimize voluntary attrition among high-performing personnel. Outlined ROC-AUC and Recall on the attrition class as primary optimization targets.</li>
+                                <li><strong>Analyze</strong>: Explored bivariate correlations: employees logging overtime were nearly 3x more likely to depart; distance from home showed positive non-linear attrition correlation; stock option levels 0 and 3 exhibited heightened departure rates.</li>
+                                <li><strong>Construct</strong>:
+                                    <ul>
+                                        <li>Engineered composite indicators: tenure-to-age ratio, salary hike-to-satisfaction index, and overtime risk flags.</li>
+                                        <li>Benchmarked <strong>Logistic Regression</strong>, <strong>Decision Trees</strong>, <strong>Random Forest</strong>, and <strong>XGBoost</strong> with 10-fold cross-validation.</li>
+                                        <li>Conducted tree-based feature importance ranking and SHAP value decomposition to explain individual predictions.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Execute</strong>: Deployed a scoring pipeline that calculates an individual attrition probability score, segmenting workers into low, moderate, and critical flight-risk categories with tailored intervention recommendations.</li>
+                            </ol>
+
+                            <hr class="separator">
+
+                            <h2>Key Verified Findings & Results</h2>
+                            <ul>
+                                <li><strong>86% Accuracy & 0.87 ROC-AUC</strong>: High diagnostic discrimination between stable personnel and prospective leavers.</li>
+                                <li><strong>Top Attrition Drivers Discovered</strong>:
+                                    <ol>
+                                        <li><strong>Overtime Working Hours</strong>: Single largest factor driving premature turnover.</li>
+                                        <li><strong>Monthly Income / Compensation Parity</strong>: Critical threshold beneath which retention drops sharply.</li>
+                                        <li><strong>Years in Current Role Without Promotion</strong>: Plateau effect triggering active external job searching.</li>
+                                    </ol>
+                                </li>
+                                <li><strong>Actionable HR Playbook</strong>: Recommended targeted retention strategies (comp adjustments, role rotations, workload redistribution) to lower annual turnover costs by estimated double-digit percentages.</li>
+                            </ul>
+
+                            <hr class="separator">
+
+                            <h2>Skills & Technologies Applied</h2>
+                            <p>
+                                <strong>Python</strong>, <strong>Random Forest</strong>, <strong>XGBoost</strong>, <strong>Scikit-learn</strong>, <strong>SHAP / Feature Importance</strong>, <strong>Pandas</strong>, <strong>Matplotlib</strong>, <strong>Seaborn</strong>.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="portfolio-info">
+                            <h3>Project Summary</h3>
+                            <ul>
+                                <li><strong>Role</strong> ML Intern (DecodeLabs)</li>
+                                <li><strong>Domain</strong> HR Analytics & Predictive ML</li>
+                                <li><strong>Methodology</strong> Google PACE Framework</li>
+                                <li><strong>Core Tech</strong> XGBoost, Random Forest, SHAP</li>
+                                <li><strong>Key Metric</strong> 86% Accuracy, 0.87 AUC</li>
+                                <li><strong>Application</strong> Proactive Retention Engine</li>
+                            </ul>
+
+                            <hr>
+                            <p><strong>Source Code & Implementation:</strong></p>
+                            <a href="https://github.com/hamzajawad123/employee-attrition-prediction" class="btn-visit" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github"></i> View GitHub Repository
+                            </a>
+                            <br>
+                            <a href="../index.html#portfolio" class="btn-visit" style="background: #5a189a;">
+                                <i class="bi bi-arrow-left"></i> Back to All Projects
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container mt-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed using BootstrapMade Impact Template
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

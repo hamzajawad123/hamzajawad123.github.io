@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>E-Commerce Churn & LTV Predictor | Hamza Jawad Portfolio</title>
+    <meta content="Two-model MLOps pipeline for predicting customer churn and lifetime value on 50,000 records using Feast, CatBoost, MLflow, and FastAPI." name="description">
+
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .portfolio-description {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .portfolio-description h2 {
+            font-weight: 700;
+            margin-top: 30px;
+            color: #000000;
+        }
+
+        .portfolio-description ul,
+        .portfolio-description ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-description p {
+            margin-bottom: 20px;
+        }
+
+        .separator {
+            border: 0;
+            height: 1px;
+            background: #e0e0e0;
+            margin: 30px 0;
+        }
+
+        .btn-visit {
+            display: block;
+            background: var(--color-primary);
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px 0;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-visit:hover {
+            background: #2a054c;
+            color: #fff;
+        }
+
+        .portfolio-info h3 {
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-info ul {
+            padding-left: 0;
+            list-style: none;
+            color: #000000;
+        }
+
+        .portfolio-info li {
+            margin-bottom: 10px;
+        }
+
+        .metric-badge {
+            display: inline-block;
+            background: rgba(90, 24, 154, 0.1);
+            color: var(--color-primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 13px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="../index.html" class="logo d-flex align-items-center">
+                <h1>Portfolio<span>.</span></h1>
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="../index.html#hero">Home</a></li>
+                    <li><a href="../aboutme.html">About Me</a></li>
+                    <li><a href="../experience.html">Experience</a></li>
+                    <li><a href="../index.html#portfolio">Projects</a></li>
+                    <li><a href="../resume.html">Resume</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <div class="breadcrumbs">
+            <div class="page-header d-flex align-items-center">
+                <div class="container text-center position-relative">
+                    <h2>E-Commerce Churn & LTV Predictor</h2>
+                    <p>Two-Model Production MLOps Pipeline with Feast Feature Store & CatBoost</p>
+                </div>
+            </div>
+            <nav>
+                <div class="container">
+                    <ol>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#portfolio">Projects</a></li>
+                        <li>E-Commerce Churn & LTV Predictor</li>
+                    </ol>
+                </div>
+            </nav>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row justify-content-between gy-4 mt-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-description">
+
+                            <h2>Project Overview</h2>
+                            <p>
+                                In modern e-commerce, retaining existing customers is dramatically more cost-effective than acquiring new ones. However, treating all at-risk customers equally leads to wasted marketing budgets. This project implements a <strong>two-model production MLOps pipeline</strong> designed to simultaneously predict <strong>churn risk</strong> and estimate prospective <strong>Customer Lifetime Value (LTV)</strong> across <strong>50,000 customer transaction records</strong>.
+                            </p>
+
+                            <div class="mb-4">
+                                <span class="metric-badge"><i class="bi bi-graph-up"></i> +16% Holdout ROC-AUC</span>
+                                <span class="metric-badge"><i class="bi bi-database-check"></i> Feast Feature Store</span>
+                                <span class="metric-badge"><i class="bi bi-speedometer2"></i> 50,000 Records Processed</span>
+                            </div>
+
+                            <hr class="separator">
+
+                            <h2>Objective</h2>
+                            <ul>
+                                <li>Eliminate train-serve skew by establishing a standardized, centralized feature definition layer with <strong>Feast</strong>.</li>
+                                <li>Train multi-objective models: a binary classifier for <strong>churn likelihood</strong> and a continuous regressor for <strong>forward LTV estimation</strong>.</li>
+                                <li>Track model experiments and parameters via <strong>MLflow</strong> to select champion models objectively.</li>
+                                <li>Serve low-latency inference through a modular <strong>FastAPI</strong> service and provide operational visibility via a <strong>Streamlit</strong> application.</li>
+                            </ul>
+
+                            <hr class="separator">
+
+                            <h2>Technical Architecture & Implementation</h2>
+                            <ol>
+                                <li><strong>Feature Store Architecture with Feast</strong>:
+                                    <p>Defined reusable customer entities and feature views covering RFM metrics (Recency, Frequency, Monetary value), historical return rates, cart abandonment ratios, and discount sensitivity. Feast ensured consistency between offline batch training and online real-time inference.</p>
+                                </li>
+                                <li><strong>Model Development & Tuning</strong>:
+                                    <ul>
+                                        <li>Compared multiple architectures including Logistic Regression, Random Forest, XGBoost, and <strong>CatBoost</strong>.</li>
+                                        <li>CatBoost handled categorical user segments and high-cardinality geographic features effectively without manual one-hot explosion.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Experiment Tracking with MLflow</strong>:
+                                    <p>Logged hyperparameter grids, precision-recall curves, ROC curves, and feature importances into MLflow for full reproducibility and artifact registry.</p>
+                                </li>
+                                <li><strong>Deployment & Serving</strong>:
+                                    <p>Exposed scoring endpoints via <strong>FastAPI</strong>, allowing CRM systems to query churn probabilities and estimated lifetime values in real time, backed by an intuitive Streamlit interface.</p>
+                                </li>
+                            </ol>
+
+                            <hr class="separator">
+
+                            <h2>Key Verified Results</h2>
+                            <ul>
+                                <li>The <strong>CatBoost champion model improved holdout ROC-AUC by 16%</strong> over the baseline statistical benchmark.</li>
+                                <li>Seamless online feature retrieval with sub-50ms latency using Feast feature definitions.</li>
+                                <li>Delivered dual-axis customer segmentation: prioritizing proactive retention outreach toward high-LTV, high-churn-risk segments.</li>
+                            </ul>
+
+                            <hr class="separator">
+
+                            <h2>What This Project Demonstrates</h2>
+                            <p>
+                                This project showcases modern <strong>production machine learning architecture</strong>: feature store integration, multi-model operational pipelines, model experiment tracking, and clean API design to deliver quantifiable business value.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="portfolio-info">
+                            <h3>Project Summary</h3>
+                            <ul>
+                                <li><strong>Domain</strong> E-Commerce MLOps & CRM Analytics</li>
+                                <li><strong>Dataset</strong> 50,000 Transaction Rows</li>
+                                <li><strong>Feature Store</strong> Feast Feature Store</li>
+                                <li><strong>Modeling</strong> CatBoost, XGBoost, Scikit-learn</li>
+                                <li><strong>Tracking</strong> MLflow Experiment Tracking</li>
+                                <li><strong>Serving</strong> FastAPI & Streamlit Dashboard</li>
+                            </ul>
+
+                            <hr>
+                            <p><strong>Source Code & Implementation:</strong></p>
+                            <a href="https://github.com/hamzajawad123/e-commerce-churn-predictor" class="btn-visit" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github"></i> View GitHub Repository
+                            </a>
+                            <br>
+                            <a href="../index.html#portfolio" class="btn-visit" style="background: #5a189a;">
+                                <i class="bi bi-arrow-left"></i> Back to All Projects
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container mt-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed using BootstrapMade Impact Template
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

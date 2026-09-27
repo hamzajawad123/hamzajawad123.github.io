@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Binance Crypto Volatility Predictor | Hamza Jawad Portfolio</title>
+    <meta content="Local-first MLOps pipeline forecasting 24-hour-ahead volatility for 4 crypto assets (BTC, ETH, BNB, SOL) using LightGBM, XGBoost, and MLflow." name="description">
+
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .portfolio-description {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .portfolio-description h2 {
+            font-weight: 700;
+            margin-top: 30px;
+            color: #000000;
+        }
+
+        .portfolio-description ul,
+        .portfolio-description ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-description p {
+            margin-bottom: 20px;
+        }
+
+        .separator {
+            border: 0;
+            height: 1px;
+            background: #e0e0e0;
+            margin: 30px 0;
+        }
+
+        .btn-visit {
+            display: block;
+            background: var(--color-primary);
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px 0;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-visit:hover {
+            background: #2a054c;
+            color: #fff;
+        }
+
+        .portfolio-info h3 {
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-info ul {
+            padding-left: 0;
+            list-style: none;
+            color: #000000;
+        }
+
+        .portfolio-info li {
+            margin-bottom: 10px;
+        }
+
+        .metric-badge {
+            display: inline-block;
+            background: rgba(90, 24, 154, 0.1);
+            color: var(--color-primary);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 13px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="../index.html" class="logo d-flex align-items-center">
+                <h1>Portfolio<span>.</span></h1>
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="../index.html#hero">Home</a></li>
+                    <li><a href="../aboutme.html">About Me</a></li>
+                    <li><a href="../experience.html">Experience</a></li>
+                    <li><a href="../index.html#portfolio">Projects</a></li>
+                    <li><a href="../resume.html">Resume</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <div class="breadcrumbs">
+            <div class="page-header d-flex align-items-center">
+                <div class="container text-center position-relative">
+                    <h2>Binance Crypto Volatility Predictor</h2>
+                    <p>Local-First MLOps Pipeline for 24-Hour Forward Volatility Across 4 Major Crypto Assets</p>
+                </div>
+            </div>
+            <nav>
+                <div class="container">
+                    <ol>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#portfolio">Projects</a></li>
+                        <li>Binance Crypto Volatility Predictor</li>
+                    </ol>
+                </div>
+            </nav>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row justify-content-between gy-4 mt-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-description">
+
+                            <h2>Project Overview</h2>
+                            <p>
+                                Cryptocurrency markets operate 24/7 with non-stationary volatility clusters and rapid regime shifts. Accurately quantifying <strong>24-hour-ahead forward volatility</strong> is essential for dynamic risk management, position sizing, and derivatives valuation. This project develops a <strong>local-first MLOps pipeline</strong> forecasting forward volatility for 4 leading cryptocurrency assets: <strong>Bitcoin (BTC)</strong>, <strong>Ethereum (ETH)</strong>, <strong>Binance Coin (BNB)</strong>, and <strong>Solana (SOL)</strong>.
+                            </p>
+
+                            <div class="mb-4">
+                                <span class="metric-badge"><i class="bi bi-graph-down-arrow"></i> 19% Error Reduction vs Baseline</span>
+                                <span class="metric-badge"><i class="bi bi-currency-bitcoin"></i> 4 Core Crypto Assets</span>
+                                <span class="metric-badge"><i class="bi bi-clock-history"></i> 24h Forward Horizon</span>
+                            </div>
+
+                            <hr class="separator">
+
+                            <h2>Objectives</h2>
+                            <ul>
+                                <li>Ingest and process granular OHLCV price feeds from the Binance API.</li>
+                                <li>Engineer domain-specific financial volatility features (Garman-Klass, Parkinson, Exponentially Weighted Moving Average volatility).</li>
+                                <li>Train robust gradient boosted models (<strong>LightGBM</strong> and <strong>XGBoost</strong>) capable of learning asymmetric volatility response.</li>
+                                <li>Maintain full experiment tracking with <strong>MLflow</strong> and deploy a lightweight local-first <strong>FastAPI</strong> prediction engine.</li>
+                            </ul>
+
+                            <hr class="separator">
+
+                            <h2>Engineering & Pipeline Details</h2>
+                            <ol>
+                                <li><strong>Financial Feature Engineering</strong>:
+                                    <p>Constructed rolling log-returns, realized volatility over multiple historical windows (1h, 4h, 12h, 24h, 7d), cross-asset correlation features, and volume momentum indicators to capture volatility clustering.</p>
+                                </li>
+                                <li><strong>Model Architecture & Experimentation</strong>:
+                                    <ul>
+                                        <li>Tuned hyperparameter spaces for LightGBM and XGBoost using rolling time-series cross-validation to prevent forward-looking data leakage.</li>
+                                        <li>Tracked all experiments, metrics (RMSE, MAE, MAPE), and model artifacts using <strong>MLflow</strong>.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Benchmarking Against Persistence</strong>:
+                                    <p>Compared predictions directly against a naive persistence baseline (yesterday's realized volatility = tomorrow's volatility) and classical GARCH(1,1) benchmarks.</p>
+                                </li>
+                                <li><strong>API Serving</strong>:
+                                    <p>Implemented a clean REST API using <strong>FastAPI</strong> enabling programmatic retrieval of 24h volatility forecasts and risk percentiles for all 4 assets.</p>
+                                </li>
+                            </ol>
+
+                            <hr class="separator">
+
+                            <h2>Key Verified Results</h2>
+                            <ul>
+                                <li>Achieved a <strong>19% reduction in forecast error (RMSE)</strong> compared to the naive persistence baseline.</li>
+                                <li>Demonstrated consistent predictive power across all 4 evaluated assets (BTC, ETH, BNB, SOL) across differing market volatility regimes.</li>
+                                <li>Constructed a modular, reproducible local MLOps pipeline ready for real-time streaming integration.</li>
+                            </ul>
+
+                            <hr class="separator">
+
+                            <h2>What This Project Demonstrates</h2>
+                            <p>
+                                Practical competence in <strong>quantitative time-series engineering</strong>, baseline-oriented machine learning validation, MLflow lifecycle management, and production-ready API development.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="portfolio-info">
+                            <h3>Project Summary</h3>
+                            <ul>
+                                <li><strong>Domain</strong> Financial Time-Series & Volatility ML</li>
+                                <li><strong>Assets</strong> BTC, ETH, BNB, SOL</li>
+                                <li><strong>Algorithms</strong> LightGBM, XGBoost</li>
+                                <li><strong>Tracking</strong> MLflow Model Registry</li>
+                                <li><strong>Serving</strong> FastAPI Endpoint</li>
+                                <li><strong>Horizon</strong> 24-Hour Forward Prediction</li>
+                            </ul>
+
+                            <hr>
+                            <p><strong>Source Code & Implementation:</strong></p>
+                            <a href="https://github.com/hamzajawad123/binance_crypto_volatility_predictor" class="btn-visit" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github"></i> View GitHub Repository
+                            </a>
+                            <br>
+                            <a href="../index.html#portfolio" class="btn-visit" style="background: #5a189a;">
+                                <i class="bi bi-arrow-left"></i> Back to All Projects
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container mt-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed using BootstrapMade Impact Template
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Fake Job Posting Detection | Hamza Jawad Portfolio</title>
+    <meta content="Natural language processing and classification pipeline detecting fraudulent employment listings by Hamza Jawad (DecodeLabs Internship)." name="description">
+
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Montserrat:wght@500;700&display=swap"
+        rel="stylesheet">
+
+    <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <link href="../assets/css/main.css" rel="stylesheet">
+
+    <style>
+        .portfolio-description {
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        .portfolio-description h2 {
+            font-weight: 700;
+            margin-top: 30px;
+            color: #000000;
+        }
+
+        .portfolio-description ul,
+        .portfolio-description ol {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-description p {
+            margin-bottom: 20px;
+        }
+
+        .separator {
+            border: 0;
+            height: 1px;
+            background: #e0e0e0;
+            margin: 30px 0;
+        }
+
+        .btn-visit {
+            display: block;
+            background: var(--color-primary);
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 10px 0;
+            font-weight: 600;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-visit:hover {
+            background: #2a054c;
+            color: #fff;
+        }
+
+        .portfolio-info h3 {
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+
+        .portfolio-info ul {
+            padding-left: 0;
+            list-style: none;
+            color: #000000;
+        }
+
+        .portfolio-info li {
+            margin-bottom: 10px;
+        }
+
+        .metric-badge {
+            display: inline-block;
+            background: rgba(90, 24, 154, 0.1);
+            color: var(--color-primary);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 13px;
+            margin-right: 8px;
+            margin-bottom: 8px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="header d-flex align-items-center">
+        <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+            <a href="../index.html" class="logo d-flex align-items-center">
+                <h1>Portfolio<span>.</span></h1>
+            </a>
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a href="../index.html#hero">Home</a></li>
+                    <li><a href="../aboutme.html">About Me</a></li>
+                    <li><a href="../experience.html">Experience</a></li>
+                    <li><a href="../index.html#portfolio">Projects</a></li>
+                    <li><a href="../resume.html">Resume</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+            <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+        </div>
+    </header>
+
+    <main id="main">
+
+        <div class="breadcrumbs">
+            <div class="page-header d-flex align-items-center">
+                <div class="container text-center position-relative">
+                    <h2>Fake Job Posting Detection with NLP</h2>
+                    <p>Natural Language Processing & Classification Pipeline Detecting Fraudulent Employment Listings</p>
+                </div>
+            </div>
+            <nav>
+                <div class="container">
+                    <ol>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../index.html#portfolio">Projects</a></li>
+                        <li>Fake Job Posting Detection</li>
+                    </ol>
+                </div>
+            </nav>
+        </div>
+
+        <section id="portfolio-details" class="portfolio-details">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row justify-content-between gy-4 mt-4">
+
+                    <div class="col-lg-8">
+                        <div class="portfolio-description">
+
+                            <h2>Project Overview</h2>
+                            <p>
+                                Developed during my <strong>Machine Learning Internship at DecodeLabs</strong>, this project tackles employment recruitment fraud by building an end-to-end <strong>Natural Language Processing (NLP)</strong> classification pipeline. Online employment scams exploit job seekers for financial extortion or identity theft, demanding automated screening mechanisms for job boards and recruitment portals.
+                            </p>
+                            <p>
+                                The pipeline processes over <strong>17,880 real-world job postings</strong>, combining high-dimensional unstructured textual signals (company profiles, job descriptions, requirements, and benefits) with structured metadata flags (company logo presence, telecommuting flags, education levels) to flag suspicious listings with high precision.
+                            </p>
+
+                            <div class="mb-4">
+                                <span class="metric-badge"><i class="bi bi-graph-up-arrow"></i> 88% Fraud F1-Score</span>
+                                <span class="metric-badge"><i class="bi bi-shield-check"></i> 95% Precision</span>
+                                <span class="metric-badge"><i class="bi bi-file-text"></i> 17,880 Postings Analyzed</span>
+                                <span class="metric-badge"><i class="bi bi-body-text"></i> TF-IDF & Metadata Union</span>
+                            </div>
+
+                            <hr class="separator">
+
+                            <h2>The Challenge: Deceptive Text & Sparsity</h2>
+                            <ul>
+                                <li><strong>Subtle Deception</strong>: Scammers craft realistic-looking job titles, descriptions, and salary offerings that closely mirror legitimate companies.</li>
+                                <li><strong>Extreme Sparsity & High Dimensionality</strong>: Raw text features span thousands of unique vocabulary tokens, many of which appear infrequently or with minor typos.</li>
+                                <li><strong>Low Prior Probability</strong>: Only ~4.4% of total postings are fraudulent, meaning models must avoid flagging real company postings while capturing elusive scam patterns.</li>
+                            </ul>
+
+                            <hr class="separator">
+
+                            <h2>Methodology: Google PACE Framework</h2>
+                            <ol>
+                                <li><strong>Plan</strong>: Formulated the NLP objective to maximize the harmonic mean of precision and recall (<strong>F1-score</strong>) on the fraudulent class, ensuring recruitment platforms don't alienate legitimate recruiters.</li>
+                                <li><strong>Analyze</strong>: Discovered that scam listings frequently lack company logos, exhibit generic company descriptions, promise unrealistic remote-work compensation, or omit specific skill requirements.</li>
+                                <li><strong>Construct</strong>:
+                                    <ul>
+                                        <li>Built a comprehensive text preprocessing pipeline: HTML tag cleaning, lowercasing, punctuation stripping, tokenization, stop-word removal, and WordNet lemmatization.</li>
+                                        <li>Extracted <strong>TF-IDF n-grams</strong> (unigrams and bigrams) with sublinear term-frequency scaling.</li>
+                                        <li>Created a <strong>FeatureUnion</strong> marrying sparse TF-IDF text features with dense binary metadata flags (has_company_logo, has_questions, telecommuting).</li>
+                                        <li>Benchmarked <strong>Multinomial Naive Bayes</strong>, <strong>Logistic Regression (L2)</strong>, <strong>Random Forest</strong>, and <strong>LightGBM</strong> with balanced class weights.</li>
+                                    </ul>
+                                </li>
+                                <li><strong>Execute</strong>: Evaluated threshold calibration, achieving an optimal trade-off of <strong>95% Precision</strong> and <strong>88% F1-score</strong> on unseen holdout test sets.</li>
+                            </ol>
+
+                            <hr class="separator">
+
+                            <h2>Key Verified Results</h2>
+                            <ul>
+                                <li><strong>88% F1-Score on Fraudulent Class</strong>: Superior detection capability on rare scam postings.</li>
+                                <li><strong>95% Precision</strong>: Ensures that 19 out of 20 flagged listings are genuine scams, dramatically minimizing false recruiter bans.</li>
+                                <li><strong>Feature Insights</strong>: Extracted dominant keywords strongly correlated with fraudulent postings (e.g., wire transfer, data entry clerk without experience, immediate hiring without interview).</li>
+                            </ul>
+
+                            <hr class="separator">
+
+                            <h2>Skills & Technologies Applied</h2>
+                            <p>
+                                <strong>Python</strong>, <strong>NLP (NLTK)</strong>, <strong>TF-IDF Vectorization</strong>, <strong>Scikit-learn</strong>, <strong>Logistic Regression</strong>, <strong>Random Forest</strong>, <strong>Pandas</strong>, <strong>Seaborn</strong>.
+                            </p>
+
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3">
+                        <div class="portfolio-info">
+                            <h3>Project Summary</h3>
+                            <ul>
+                                <li><strong>Role</strong> ML Intern (DecodeLabs)</li>
+                                <li><strong>Domain</strong> NLP & Scam Detection</li>
+                                <li><strong>Methodology</strong> Google PACE Framework</li>
+                                <li><strong>Core Tech</strong> TF-IDF, NLTK, Scikit-learn</li>
+                                <li><strong>Key Metric</strong> 88% F1-Score (Fraud)</li>
+                                <li><strong>Dataset</strong> 17,880 Job Postings (EMSCAD)</li>
+                            </ul>
+
+                            <hr>
+                            <p><strong>Source Code & Implementation:</strong></p>
+                            <a href="https://github.com/hamzajawad123/fake-job-posting-detection" class="btn-visit" target="_blank" rel="noopener noreferrer">
+                                <i class="bi bi-github"></i> View GitHub Repository
+                            </a>
+                            <br>
+                            <a href="../index.html#portfolio" class="btn-visit" style="background: #5a189a;">
+                                <i class="bi bi-arrow-left"></i> Back to All Projects
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer">
+        <div class="container mt-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Impact</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">
+                Designed using BootstrapMade Impact Template
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
+    <div id="preloader"></div>
+
+    <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/aos/aos.js"></script>
+    <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="../assets/js/main.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+
+</body>
+
+</html>
